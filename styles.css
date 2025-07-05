@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f7e9ff;
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+}
+#question {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+button {
+  margin: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#yesBtn {
+  background: #a3e635;
+}
+#noBtn {
+  background: #f87171;
+  position: static;
+}
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+.yes-btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.button-row.only-yes .yes-btn-wrapper {
+  /* No overrides, keep original flex centering */
+}
+.button-row.only-yes #yesBtn {
+  margin-left: 0;
+  margin-right: 0;
+  display: inline-block;
+}
+.button-row.only-yes #noBtn {
+  visibility: hidden;
+}
+/* Remove the text-align override that was causing uncentering */
